@@ -4,6 +4,8 @@
 
 ## Description
 
+![schema-hair-salon](/img/schema.png)
+
 ## Technologies Used
 
 - C#

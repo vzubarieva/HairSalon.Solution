@@ -7,19 +7,19 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-    public class CuisinesController : Controller
+    public class ClientController : Controller
     {
         private readonly HairSalonContext _db;
 
-        public CuisinesController(BestRestaurantsContext db)
+        public ClientsController(HairSalonContext db)
         {
             _db = db;
         }
 
-        public ActionResult Index()
-        {
-            List<Cuisine> model = _db.Cuisines.Include(cuisine => cuisine.Restaurant).ToList();
-            return View(model);
-        }
+        // public ActionResult Index()
+        // {
+        //     List<Client> model = _db.Clients.Include(client => client.Restaurant).ToList();
+        //     return View(model);
+        // }
     }
 }
