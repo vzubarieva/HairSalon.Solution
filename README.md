@@ -1,4 +1,4 @@
-# Name of the project
+# Hair Salon "Eau Claire's Salon"
 
 #### By: Viktoriia Zubarieva
 
@@ -14,17 +14,9 @@
 
 ## Setup/Installation Requirements
 
-- Clone this project to your desktop with the link provided on the its Github [repository](https://github.com/vzubarieva/Vendor-and--order-tracker.Solution)
+- Clone this project to your desktop with the link provided on the its Github [repository](https://github.com/vzubarieva/HairSalon.Solution)
 - Navigate to the top level of the directory
-- Navigate to VAOT folder
-- Run the command `dotnet restore` in the terminal opened to the directory
-- Run `dotnet build` to build the site
-- Then run the command `dotnet watch run` to start the live server in the browser
-- Please follow the buttons and links to create new vendors and orders and view them.
-
-- If you want to test project, navigate to VAOT.Tests folder
-- Run the command `dotnet restore` in the terminal opened to the directory
-- Then run the command `dotnet test` to test the project in the console
+-
 
 ## Known Bugs
 
