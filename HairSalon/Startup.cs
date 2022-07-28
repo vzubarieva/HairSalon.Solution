@@ -25,7 +25,7 @@ namespace BestRestaurants
             services.AddMvc();
             services
                 .AddEntityFrameworkMySql()
-                //.AddDbContext<BestRestaurantsContext>(
+                .AddDbContext<HairSalonContext>(
                     options =>
                         options.UseMySql(
                             Configuration["ConnectionStrings:DefaultConnection"],

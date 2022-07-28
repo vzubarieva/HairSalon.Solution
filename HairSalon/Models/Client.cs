@@ -1,8 +1,8 @@
-namespace BestRestaurants.Models
+namespace HairSalon.Models
 {
-    public class Cuisine
+    public class Client
     {
-        public int CuisineId { get; set; }
+        public int ClientId { get; set; }
         public string Type { get; set; }
         public int RestaurantId { get; set; }
         public virtual Restaurant Restaurant { get; set; }
