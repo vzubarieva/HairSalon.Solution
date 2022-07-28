@@ -7,7 +7,7 @@ using System.Linq;
 
 namespace HairSalon.Controllers
 {
-    public class ClientController : Controller
+    public class ClientsController : Controller
     {
         private readonly HairSalonContext _db;
 
@@ -16,10 +16,10 @@ namespace HairSalon.Controllers
             _db = db;
         }
 
-        // public ActionResult Index()
-        // {
-        //     List<Client> model = _db.Clients.Include(client => client.Restaurant).ToList();
-        //     return View(model);
-        // }
+        public ActionResult Index()
+        {
+            List<Client> model = _db.Clients.ToList();
+            return View(model);
+        }
     }
 }
