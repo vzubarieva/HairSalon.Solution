@@ -9,3 +9,4 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
     <h3>@Html.DisplayNameFor(model => model.Details): @Html.DisplayFor(model => model.Details)</h3>
     <p>@Html.ActionLink("Back to list", "Index")</p>
+    <p>@Html.ActionLink("Edit client info", "Edit", new { id = Model.ClientId })</p>
