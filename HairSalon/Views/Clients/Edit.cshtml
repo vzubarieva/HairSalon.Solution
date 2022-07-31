@@ -10,15 +10,19 @@
 
 @using (Html.BeginForm())
 {
-  @Html.HiddenFor(model => model.ClientId)
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"> @Html.HiddenFor(model => model.ClientId)</li>
+    <li class="list-group-item"> @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name)</li>
+    <li class="list-group-item"> @Html.LabelFor(model => model.Details)
+      @Html.EditorFor(model => model.Details)</li>
+    <li class="list-group-item"> @Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")</li>
+  </ul>
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.Details)
-  @Html.EditorFor(model => model.Details)
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
 
   <input type="submit" value="Save" />
 }
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("Back to list", "Index", new { } , new {@class="btn btn-outline-secondary"})
+</div>

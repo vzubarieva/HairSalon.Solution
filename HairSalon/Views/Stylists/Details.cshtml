@@ -7,13 +7,22 @@
 
 <h2>Stylist Details</h2>
 <hr />
-<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
-
-    <h3>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h3>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">
+    <h1>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h1>
+  </li>
+  <li class="list-group-item">
+    <h1>@Html.DisplayNameFor(model => model.Specialty): @Html.DisplayFor(model => model.Specialty)</h1>
+    <h2>List of clients </h2>
     @foreach (Client client in Model.Clients)
     {
-      <li>@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })</li>
+    <li class="list-group-item">@Html.ActionLink($"{client.Name}", "Details", "Clients", new { id = client.ClientId })
+    </li>
     }
-    <p>@Html.ActionLink("Edit stylist", "Edit", new { id = Model.StylistId })</p>
-    <p>@Html.ActionLink("Delete stylist", "Delete", new { id = Model.StylistId })</p>
-    <p>@Html.ActionLink("Back to list", "Index")</p>
+  </li>
+</ul>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("Edit stylist", "Edit", new { id = Model.StylistId } , new {@class="btn btn-outline-secondary"})
+  @Html.ActionLink("Delete stylist", "Delete", new { id = Model.StylistId } , new {@class="btn btn-outline-secondary"})
+  @Html.ActionLink("Back to list", "Index", new { } , new {@class="btn btn-outline-secondary"})
+</div>

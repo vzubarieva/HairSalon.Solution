@@ -11,10 +11,16 @@
 {
   <h3>No clients have been added yet!</h3>
 }
+<ul class="list-group list-group-flush">
+  @foreach (Client client in Model)
+  {
 
-@foreach (Client client in Model)
-{
-  <li>@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) | @client.Stylist.Name</li>
-}
-<p>@Html.ActionLink("Add new client", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+    <li class="list-group-item">@Html.ActionLink($"{client.Name}", "Details", new { id = client.ClientId }) |
+      @client.Stylist.Name</li>
+
+  }
+</ul>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("Add new client", "Create", new { } , new {@class="btn btn-outline-secondary"})
+  @Html.ActionLink("Home", "Index", "Home", new { } , new {@class="btn btn-outline-secondary"})
+</div>

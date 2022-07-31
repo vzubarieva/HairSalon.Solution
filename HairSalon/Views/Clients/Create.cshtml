@@ -7,12 +7,16 @@
 <h4>Add a new client</h4>
 @using (Html.BeginForm())
 {
-  @Html.LabelFor(model => model.Name)
-  @Html.TextBoxFor(model => model.Name)
-  @Html.LabelFor(model => model.Details)
-  @Html.TextBoxFor(model => model.Details)
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-  <input type="submit" value="Add new client" />
+  <div class="mb-3">@Html.LabelFor(model => model.Name, new {@class="form-label"})
+    @Html.TextBoxFor(model => model.Name, new {@class="form-control"})</div>
+  <div class="mb-3">@Html.LabelFor(model => model.Details, new {@class="form-label"})
+    @Html.TextBoxFor(model => model.Details, new {@class="form-control"})</div>
+  <div class="mb-3">@Html.LabelFor(model => model.Stylist, new {@class="form-label"})
+    @Html.DropDownList("StylistId")</div>
+
+
+  <input type="submit" value="Add new client" class="btn btn-primary" />
 }
-<p>@Html.ActionLink("Show all clients", "Index")</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("Show all clients", "Index", new { } , new {@class="btn btn-outline-secondary"})
+</div>

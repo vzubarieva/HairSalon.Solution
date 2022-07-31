@@ -12,11 +12,14 @@
   <h3>No stylists have been added yet!</h3>
 }
 
-@foreach (Stylist stylist in Model)
-{
-  <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) </li>
+<ul class="list-group list-group-flush">
+  @foreach (Stylist stylist in Model)
+  {
+    <li class="list-group-item">@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+  }
+</ul>
 
-}
-
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("Add new stylist", "Create", new { } , new {@class="btn btn-outline-secondary"})
+  @Html.ActionLink("Home", "Index", "Home", new { }, new {@class="btn btn-outline-secondary"})
+</div>

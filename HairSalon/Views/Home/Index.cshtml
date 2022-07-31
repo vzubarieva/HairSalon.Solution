@@ -3,7 +3,10 @@
 }
 
 
-<h1>Welcome to the Eau Claire's Salon!</h1>
+@* <h1>Welcome to the Eau Claire's Salon!</h1> *@
 <h2>Here you can find list of stylists with its clients!</h2>
-<p>@Html.ActionLink("See all clients", "Index", "Clients")</p>
-<p>@Html.ActionLink("See all stylists", "Index", "Stylists")</p>
+
+<div class="hstack gap-3 pt-3 mt-3 border-top border-dark">
+  @Html.ActionLink("See all clients", "Index", "Clients", new { } , new {@class="btn btn-outline-secondary"})
+  @Html.ActionLink("See all stylists", "Index", "Stylists", new { } , new {@class="btn btn-outline-secondary"})
+</div>
