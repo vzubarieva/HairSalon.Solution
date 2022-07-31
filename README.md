@@ -6,7 +6,7 @@
 
 MVC web application is cleated to help manage hair salon employees (stylists) and their clients. An owner should be able to add a list of stylists working at the salon, and for each stylist, add clients who see that stylist. The stylists have specific specialties, so each client can only see (belong to) a single stylist.
 
-![schema-hair-salon](/img/schema.png)
+![schema-hair-salon](HairSalon/wwwroot/img/schema.png)
 
 ## Technologies Used
 
@@ -19,8 +19,8 @@ MVC web application is cleated to help manage hair salon employees (stylists) an
 
 ## Technology Requirements
 
-.NET 5
-A text editor like VS Code
+- .NET 5
+- A text editor like VS Code
 
 ## Setup/Installation Requirements
 
